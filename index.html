@@ -54,7 +54,7 @@ function search(){
   const L=D[id];
   if(!L){r.innerHTML='<div class="err">لم يتم العثور على هذا الكود</div>';return}
   r.innerHTML=L.map(d=>'<div class="out"><div class="name">'+esc(d[0])+'</div>'+
-  [["اليوم",d[1]],["التاريخ",d[2]],["الموعد",d[3]],["المكان",d[4]],["المعيد",d[5]]].map(x=>'<div class="kv"><span>'+x[0]+'</span><b>'+esc(x[1])+'</b></div>').join("")+'</div>').join('<div style="height:12px"></div>');
+  [["اليوم",d[1]],["التاريخ",d[2]],["الموعد",d[3]],["المكان",d[4]],["TA",d[5]]].map(x=>'<div class="kv"><span>'+x[0]+'</span><b>'+esc(x[1])+'</b></div>').join("")+'</div>').join('<div style="height:12px"></div>');
 }
 $("go").onclick=search;
 $("sid").addEventListener("keydown",e=>{if(e.key==="Enter")search()});
